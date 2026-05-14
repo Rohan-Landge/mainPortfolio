@@ -305,10 +305,16 @@ main {
   perspective: 1200px;
   display: flex;
   justify-content: center;
+  overflow: visible;
+}
+/* Contained glow: wrapper no longer emits a large blurred patch */
+.hero-3d-wrapper::before {
+  display: none;
 }
 
 .hero-card {
   position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 360px;
   border-radius: var(--radius-xl);
@@ -320,22 +326,30 @@ main {
   transform-style: preserve-3d;
   transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-card::before {
+  /* Toned-down, card-relative neon glow */
   content: "";
   position: absolute;
-  inset: -40%;
-  background: conic-gradient(from 180deg, rgba(56, 189, 248, 0.35), rgba(168, 85, 247, 0.1), transparent, transparent);
+  top: 50%;
+  left: 50%;
+  width: calc(100% + 28px);
+  height: calc(100% + 28px);
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  background: radial-gradient(closest-side, rgba(56, 189, 248, 0.28), rgba(168, 85, 247, 0.10) 50%, transparent 65%);
   opacity: 0;
-  transition: opacity 0.3s ease-out;
-  z-index: -1;
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
   pointer-events: none;
+  z-index: 0;
+  filter: blur(10px);
 }
 
 .hero-card:hover::before {
   opacity: 1;
+  transform: translate(-50%, -50%) scale(1.02);
 }
 
 .hero-card-header {
@@ -469,7 +483,7 @@ main {
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(56, 189, 248, 0.5);
-  color: var(--text-muted);
+  color: white;
 }
 
 .hero-card-footer span.status i {
@@ -486,6 +500,7 @@ main {
 }
 
 .mini-link {
+  color: var(--text-main);
   padding: 4px 8px;
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.9);
