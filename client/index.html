@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Portfolio - Rohan Landge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <header>
+      <div class="logo">
+        <div class="logo-orb"></div>
+        <div class="logo-text">Rohan Landge</div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button class="nav-btn" onclick="scrollToSection('contact')">
+          <span>Let's Talk</span>
+          <span>💬</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO TEXT -->
+      <section class="hero-text">
+        <span class="badge">
+          <i></i> Available for opportunities
+        </span>
+        <h1>
+          Building <span class="highlight">clean, modern</span> experiences for the web & beyond.
+        </h1>
+        <p class="subtitle">
+          I'm a Computer Science Engineer focused on crafting scalable applications, intuitive user experiences, and reliable systems.
+          This portfolio highlights my core skills, best projects, and professional journey.
+        </p>
+
+        <div class="hero-meta">
+          <div class="meta-pill">
+            <strong>Primary Stack</strong> • HTML, CSS, JS, React, Node.js
+          </div>
+          <div class="meta-pill">
+            <strong>Interests</strong> • Full-Stack, Cloud, AI, System Design
+          </div>
+        </div>
+
+        <div class="cta-group">
+          <!-- direct-download link from your Drive (kept same) -->
+          <a class="btn-primary" href="https://drive.google.com/uc?export=download&id=1lyUSman5BKtrdXlDB64Zp_zAUBMcAVBW"
+             target="_blank" rel="noopener" download>
+            Download Resume (PDF)
+          </a>
+
+          <a class="btn-ghost" href="#projects">
+            <span class="icon">🚀</span>
+            <span>View Projects</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- HERO 3D CARD -->
+      <section class="hero-3d-wrapper" >
+        <div class="hero-card" id="tilt-card" role="img" aria-label="Rohan Landge profile card">
+          <div class="hero-card-header">
+            <div>
+              <span class="dot"></span>
+              Portfolio Overview
+            </div>
+            <div class="hero-card-chip">
+              <span>⚙</span> Software Developer / Teacher
+            </div>
+          </div>
+
+          <div class="hero-card-main">
+            <div class="avatar">
+              <div class="avatar-inner">
+                RL
+              </div>
+            </div>
+            <div class="hero-card-text">
+              <span class="role">Full Stack · Web · ML</span>
+              <h2>Rohan Landge</h2>
+              <p>
+                Engineering student (CSE) — building practical software solutions, and teaching mathematics at IMI Academy of Science.
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-card-metrics">
+            <div class="metric-pill">
+              <span class="label">Core Skills</span>
+              <span class="value">Python · Java · JS · Node · SQL</span>
+            </div>
+            <div class="metric-pill">
+              <span class="label">Projects</span>
+              <span class="value">AI Chatbot · Guidance App (prototype)</span>
+            </div>
+          </div>
+
+          <div class="hero-card-footer">
+            <span class="status">
+              <i></i> Open to Internships / SDE roles
+            </span>
+            <div class="mini-links">
+              <button class="mini-link" onclick="openLink('https://github.com/Rohan-Landge')">GitHub</button>
+              <button class="mini-link" onclick="openLink('https://www.linkedin.com/in/rohan-landge')">LinkedIn</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- SECTIONS -->
+    <section class="sections">
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="section-header">
+          <h2>About</h2>
+          <span class="tag">Who I am</span>
+        </div>
+        <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.7;">
+          Hardworking and detail-oriented Software Developer with strong analytical skills and a passion for teaching Mathematics.
+          Experienced in developing practical software solutions and delivering concept-based maths instruction at IMI Academy of Science.
+        </p>
+        <div class="chip-row" style="margin-top:14px;">
+          <div class="chip">
+            <span class="dot"></span> Strong in Data Structures & Algorithms
+          </div>
+          <div class="chip">
+            <span class="dot"></span> Comfortable with Git, CI/CD & collaboration
+          </div>
+          <div class="chip">
+            <span class="dot"></span> Enjoys mentoring & teaching others
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills">
+        <div class="section-header">
+          <h2>Skills</h2>
+          <span class="tag">What I use</span>
+        </div>
+
+        <div class="chip-row">
+          <div class="chip"><span class="dot"></span> Frontend</div>
+          <div class="chip"><span class="dot"></span> Backend</div>
+          <div class="chip"><span class="dot"></span> Databases</div>
+          <div class="chip"><span class="dot"></span> Tools & Platforms</div>
+        </div>
+
+        <div class="skill-grid">
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <span>Frontend Development</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-tags">
+              <span class="pill-sm">HTML5</span>
+              <span class="pill-sm">CSS3</span>
+              <span class="pill-sm">JavaScript</span>
+              <span class="pill-sm">React</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <span>Backend & APIs</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-tags">
+              <span class="pill-sm">Node.js</span>
+              <span class="pill-sm">Express</span>
+              <span class="pill-sm">REST APIs</span>
+              <span class="pill-sm">Auth / JWT</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <span>Databases</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-tags">
+              <span class="pill-sm">MySQL</span>
+              <span class="pill-sm">PostgreSQL</span>
+              <span class="pill-sm">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-top">
+              <span>Other</span>
+              <span class="skill-level">Comfortable</span>
+            </div>
+            <div class="skill-tags">
+              <span class="pill-sm">Git & GitHub</span>
+              <span class="pill-sm">VS Code</span>
+              <span class="pill-sm">Sublime Text</span>
+              <span class="pill-sm">Figma</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <div class="section-header">
+          <h2>Projects</h2>
+          <span class="tag">What I've built</span>
+        </div>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-badge">Featured Project</div>
+            <div class="project-title">AI Chatbot for College Website</div>
+            <p class="project-desc">
+              Designed and developed a conversational AI chatbot to assist college students with queries about academic departments,
+              events, scholarships, and course details. Integrated NLP and deployed via Flask.
+            </p>
+            <div class="project-meta-row">
+              <div class="project-stack">
+                <span class="stack-pill">Python</span>
+                <span class="stack-pill">NLP</span>
+                <span class="stack-pill">Flask</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank">View Code →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-badge">Prototype</div>
+            <div class="project-title">Student Stream & Scholarship Guidance App</div>
+            <p class="project-desc">
+              Educational platform prototype to guide students on streams, scholarships and careers. Built UI in HTML/CSS/JS; backend planned with Firebase.
+            </p>
+            <div class="project-meta-row">
+              <div class="project-stack">
+                <span class="stack-pill">HTML</span>
+                <span class="stack-pill">JS</span>
+                <span class="stack-pill">Firebase (planned)</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank">View Prototype →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE / EDUCATION -->
+      <section class="section" id="experience">
+        <div class="section-header">
+          <h2>Experience & Education</h2>
+          <span class="tag">Where I've learned</span>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-title">B.E. in Computer Science</div>
+            <div class="timeline-org">Rashtrasanth Tukdoji Maharaj Nagpur University</div>
+            <div class="timeline-meta">2022 – 2026 · Aggregate: 7.50</div>
+            <div class="timeline-desc">
+              Coursework: Data Structures, Algorithms, DBMS, OS, CN, AI, Web Development.
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">Maths Teacher</div>
+            <div class="timeline-org">IMI Academy of Science (Tuition)</div>
+            <div class="timeline-meta">2 years · Part-time</div>
+            <div class="timeline-desc">
+              Delivered concept-based mathematics instruction for school & college students; improved student understanding and exam readiness.
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-title">Achievements</div>
+            <div class="timeline-org">SPARK-2025 / Hackathons</div>
+            <div class="timeline-meta">3rd Rank / Finalist</div>
+            <div class="timeline-desc">
+              3rd Rank – SPARK-2025; Finalist – Education Awareness Hackathon.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <span class="tag">Let's build something</span>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-info">
+            <div class="contact-line">
+              <span class="label">Location:</span> Nagpur, Maharashtra, India
+            </div>
+            <div class="contact-line">
+              <span class="label">Email:</span> rohanlandge480@gmail.com
+            </div>
+            <div class="contact-line">
+              <span class="label">Phone:</span> +91-8668648119
+            </div>
+            <div>
+              <div class="contact-links">
+                <a href="https://github.com/Rohan-Landge" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/rohan-landge" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">Resume (Google Drive)</a>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-card" onsubmit="handleContactSubmit(event)">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="3" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Rohan Landge. Crafted with HTML, CSS & JavaScript.
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
